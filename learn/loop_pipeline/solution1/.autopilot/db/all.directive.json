@@ -1,0 +1,44 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "loop_pipeline",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "D:\/subham\/newcastle\/project\/learn\/loop_pipeline\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "loop_pipeline"
+              }]
+          }
+        },
+        {
+          "functionName": "loop_pipeline",
+          "label": "LOOP_I",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "D:\/subham\/newcastle\/project\/learn\/loop_pipeline\/solution1\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "loop_pipeline",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "D:\/subham\/newcastle\/project\/learn\/loop_pipeline\/solution1\/csynth.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "loop_pipeline"
+              }]
+          }
+        }
+      ]
+    }]}

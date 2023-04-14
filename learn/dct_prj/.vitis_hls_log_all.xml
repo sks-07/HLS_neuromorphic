@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.850+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dct_Pipeline_WR_Loop_Row/m_axi_gmem_BREADY' to 0." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.669+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dct_Pipeline_WR_Loop_Row/m_axi_gmem_AWUSER' to 0." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.657+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dct_Pipeline_WR_Loop_Row/m_axi_gmem_AWREGION' to 0." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.642+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dct_Pipeline_WR_Loop_Row/m_axi_gmem_AWQOS' to 0." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.629+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dct_Pipeline_WR_Loop_Row/m_axi_gmem_AWPROT' to 0." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.617+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dct_Pipeline_WR_Loop_Row/m_axi_gmem_AWCACHE' to 0." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.605+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dct_Pipeline_WR_Loop_Row/m_axi_gmem_AWLOCK' to 0." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.592+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dct_Pipeline_WR_Loop_Row/m_axi_gmem_AWBURST' to 0." projectName="dct_prj" solutionName="solution1" date="2023-04-06T15:00:09.583+0100" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

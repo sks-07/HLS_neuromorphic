@@ -1,0 +1,408 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 40, Column: 0 }
+Function:        _Z6dct_2dPA8_sS0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dct_1d(short*, short*)'
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dct_2d(short (*) [8], short (*) [8])'
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 94, Column: 0 }
+Function:        dct
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'read_data(short*, short (*) [8])'
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 70, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 94, Column: 0 }
+Function:        dct
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dct_2d(short (*) [8], short (*) [8])'
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 40, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 94, Column: 0 }
+Function:        dct
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'write_data(short (*) [8], short*)'
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 83, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 74, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.i.load.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        inputseq
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        RD_Loop_Row
+  - String:          ' '
+  - LoopLoc:         'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp:74:4'
+  - String:          ' '
+  - Function:        dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 87, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '64'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.i14.store.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        outputseq
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        WR_Loop_Row
+  - String:          ' '
+  - LoopLoc:         'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp:87:4'
+  - String:          ' '
+  - Function:        dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 87, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - OldLength:       '64'
+  - String:          ' x '
+  - OldWords:        '16'
+  - String:          'bit words has been widened by '
+  - Factor:          '8'
+  - String:          ': '
+  - Length:          '8'
+  - String:          ' x '
+  - Words:           '128'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          outputseq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        WR_Loop_Col
+  - String:          ' '
+  - LoopLoc:         'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp:89:7'
+  - String:          ' '
+  - Function:        dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 74, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OldLength:       '64'
+  - String:          ' x '
+  - OldWords:        '16'
+  - String:          'bit words has been widened by '
+  - Factor:          '8'
+  - String:          ': '
+  - Length:          '8'
+  - String:          ' x '
+  - Words:           '128'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          inputseq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq69
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        RD_Loop_Col
+  - String:          ' '
+  - LoopLoc:         'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp:76:7'
+  - String:          ' '
+  - Function:        dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 74, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OldLength:       '8'
+  - String:          ' x '
+  - OldWords:        '128'
+  - String:          'bit words has been widened by '
+  - Factor:          '4'
+  - String:          ': '
+  - Length:          '2'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          wseq69
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq71
+  - String:          ' '
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        RD_Loop_Row
+  - String:          ' '
+  - LoopLoc:         'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp:74:4'
+  - String:          ' '
+  - Function:        dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 87, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - OldLength:       '8'
+  - String:          ' x '
+  - OldWords:        '128'
+  - String:          'bit words has been widened by '
+  - Factor:          '4'
+  - String:          ': '
+  - Length:          '2'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          wseq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq73
+  - String:          ' '
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        WR_Loop_Row
+  - String:          ' '
+  - LoopLoc:         'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp:87:4'
+  - String:          ' '
+  - Function:        dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            InterfaceWithWrongType
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 94, Column: 0 }
+Function:        dct
+Args:            
+  - String:          interface mode
+  - String:          ' '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'with wrong type '
+  - String:          ''''
+  - Type:            'i16*'
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            InterfaceWithWrongType
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 94, Column: 0 }
+Function:        dct
+Args:            
+  - String:          interface mode
+  - String:          ' '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'with wrong type '
+  - String:          ''''
+  - Type:            'i16*'
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 74, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 74, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 87, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        dct
+    DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                       Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: 'C:/Users/ASUS/git/Vitis-Tutorials/Getting_Started/Vitis_HLS/reference-files/src/dct.cpp', 
+                   Line: 87, Column: 4 }
+Function:        dct
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

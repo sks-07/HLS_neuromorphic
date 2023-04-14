@@ -1,0 +1,25 @@
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:29217:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:29217:7: note: FIX-IT applied suggested code changes
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:30191:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:30191:5: note: FIX-IT applied suggested code changes
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:30205:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:30205:5: note: FIX-IT applied suggested code changes
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:30219:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:30219:5: note: FIX-IT applied suggested code changes
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:31830:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp:31830:7: note: FIX-IT applied suggested code changes

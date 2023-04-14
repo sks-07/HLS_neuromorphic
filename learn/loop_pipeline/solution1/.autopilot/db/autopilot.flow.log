@@ -1,0 +1,387 @@
+INFO-FLOW: Workspace D:/subham/newcastle/project/learn/loop_pipeline/solution1 opened at Mon Apr 10 16:14:29 +0100 2023
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       create_platform xczu7ev-ffvc1156-2-e -board  
+DBG:HLSDevice: Trying to load device library: D:/xilinx/Vitis_HLS/2022.2\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Command       create_platform done; 0.728 sec.
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.111 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.863 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vitis 
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_latency=64 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+Execute     config_interface -m_axi_latency=64 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_alignment_byte_size=64 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+Execute     config_interface -m_axi_alignment_byte_size=64 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_max_widen_bitwidth=512 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+Execute     config_interface -m_axi_max_widen_bitwidth=512 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -default_interface=kernel 
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+Execute     config_interface -default_interface=kernel 
+Execute     send_msg_by_id INFO @200-1464@%s config_rtl -register_reset_num=3 
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+Execute     config_rtl -register_reset_num=3 
+Command   open_solution done; 0.97 sec.
+Execute   set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+Execute     create_platform xczu7ev-ffvc1156-2-e -board  
+Execute     source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.101 sec.
+Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.138 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+Execute   config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+Execute   source ./loop_pipeline/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./loop_pipeline/solution1/directives.tcl
+Execute     set_directive_top -name loop_pipeline loop_pipeline 
+INFO: [HLS 200-1510] Running: set_directive_top -name loop_pipeline loop_pipeline 
+Execute     set_directive_pipeline loop_pipeline/LOOP_I 
+INFO: [HLS 200-1510] Running: set_directive_pipeline loop_pipeline/LOOP_I 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.07 seconds; current allocated memory: 105.617 MB.
+INFO: [HLS 200-10] Analyzing design file '../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp as C++
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp -foptimization-record-file=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot D:/xilinx/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp {-hls-platform-db-name=D:/xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_624.000000_DSP_1728.000000_FF_460800.000000_LUT_230400.000000_SLICE_28800.000000_URAM_96.000000 -device-name-info=xczu7ev-ffvc1156-2-e > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.cpp.clang.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.cpp.clang.err.log 
+Command       ap_eval done; 0.276 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute       set_directive_top loop_pipeline -name=loop_pipeline 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp {-hls-platform-db-name=D:/xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_624.000000_DSP_1728.000000_FF_460800.000000_LUT_230400.000000_SLICE_28800.000000_URAM_96.000000 -device-name-info=xczu7ev-ffvc1156-2-e > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/clang.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.741 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/.systemc_flag -fix-errors D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.616 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/all.directive.json -fix-errors D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.997 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.613 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.6 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.clang-tidy.loop-label.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 1.168 sec.
+Execute         source D:/xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 1.199 sec.
+Execute       ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 0.582 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.bc {-hls-platform-db-name=D:/xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_624.000000_DSP_1728.000000_FF_460800.000000_LUT_230400.000000_SLICE_28800.000000_URAM_96.000000 -device-name-info=xczu7ev-ffvc1156-2-e > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.clang.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.766 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.886 seconds; current allocated memory: 106.211 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc -args  "D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.g.bc"  
+Execute         ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.g.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.1.lower.bc -args D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.1.lower.bc > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.2.m1.bc -args D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/xilinx/Vitis_HLS/2022.2/win64/lib/libhlsm_39.bc D:/xilinx/Vitis_HLS/2022.2/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/xilinx/Vitis_HLS/2022.2/win64/lib/libhlsm_39.bc D:/xilinx/Vitis_HLS/2022.2/win64/lib/libhlsmc++_39.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.2.m1.bc > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 2.371 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.372 sec.
+Execute       run_link_or_opt -opt -out D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=loop_pipeline -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=loop_pipeline -reflow-float-conversion -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.3.fpc.bc > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 0.927 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.93 sec.
+Execute       run_link_or_opt -out D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.4.m2.bc -args D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/xilinx/Vitis_HLS/2022.2/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/xilinx/Vitis_HLS/2022.2/win64/lib/libfloatconversion_39.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.4.m2.bc > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=loop_pipeline 
+Execute         ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=loop_pipeline -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.5.gdce.bc > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       send_msg_by_id INFO @200-777@%s Vitis 
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr D:/xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=loop_pipeline -mllvm -hls-db-dir -mllvm D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/../../../kernel.xml -mllvm -top-io-mapping-info=D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=true -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=64 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=512 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=64 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -enable-reflow-vitis-flow-setting=true -mllvm -default-clock-period=10 -x ir D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=D:/xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_624.000000_DSP_1728.000000_FF_460800.000000_LUT_230400.000000_SLICE_28800.000000_URAM_96.000000 -device-name-info=xczu7ev-ffvc1156-2-e > D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 0.291 sec.
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi37ELb1EEC2EDq37_i' into 'ap_int_base<37, true>::ap_int_base<5, true>(ap_int_base<5, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi37ELb1EEC2EDq37_i' into 'ap_int_base<37, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi37ELb1EEC2EDq37_i' into 'ap_int_base<37, true>::ap_int_base(int)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<37, true>::ap_int_base<5, true>(ap_int_base<5, true> const&)' into 'ap_int_base<5, true>::RType<32, true>::mult operator*<5, true, 32, true>(ap_int_base<5, true> const&, ap_int_base<32, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:339)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<37, true>::ap_int_base(int)' into 'ap_int_base<5, true>::RType<32, true>::mult operator*<5, true, 32, true>(ap_int_base<5, true> const&, ap_int_base<32, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<37, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<5, true>::RType<32, true>::mult operator*<5, true, 32, true>(ap_int_base<5, true> const&, ap_int_base<32, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<5, true>::RType<($_0)32, true>::mult operator*<5, true>(ap_int_base<5, true> const&, int)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1633:483)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, true>::RType<32, true>::mult operator*<5, true, 32, true>(ap_int_base<5, true> const&, ap_int_base<32, true> const&)' into 'ap_int_base<5, true>::RType<($_0)32, true>::mult operator*<5, true>(ap_int_base<5, true> const&, int)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1633:481)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, true>::RType<($_0)32, true>::mult operator*<5, true>(ap_int_base<5, true> const&, int)' into 'loop_pipeline(ap_int<5>*)' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:26:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<20, true>& ap_int_base<20, true>::operator+=<37, true>(ap_int_base<37, true> const&)' into 'loop_pipeline(ap_int<5>*)' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:26:8)
+INFO: [HLS 214-291] Loop 'LOOP_J' is marked as complete unroll implied by the pipeline pragma (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:25:11)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_J' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:25:11) in function 'loop_pipeline' completely with a factor of 20 (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19:0)
+WARNING: [HLS 214-368] interface mode 'ap_none' with wrong type 'i5*' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19:0)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: copying raw kernel.xml: D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/../../../kernel.xml -> D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.009 seconds; current allocated memory: 107.051 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 107.051 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top loop_pipeline -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.0.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 118.273 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.1.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 127.562 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.g.1.bc to D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.o.1.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'loop_pipeline' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19:9)...19 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.102 seconds; current allocated memory: 155.719 MB.
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.o.2.bc -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 159.684 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.301 sec.
+Command     elaborate done; 10.219 sec.
+Execute     ap_eval exec zip -j D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'loop_pipeline' ...
+Execute       ap_set_top_model loop_pipeline 
+Execute       get_model_list loop_pipeline -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model loop_pipeline 
+Execute       get_model_list loop_pipeline -filter all-wo-channel 
+INFO-FLOW: Model list for configure: loop_pipeline
+INFO-FLOW: Configuring Module : loop_pipeline ...
+Execute       set_default_model loop_pipeline 
+Execute       apply_spec_resource_limit loop_pipeline 
+INFO-FLOW: Model list for preprocess: loop_pipeline
+INFO-FLOW: Preprocessing Module: loop_pipeline ...
+Execute       set_default_model loop_pipeline 
+Execute       cdfg_preprocess -model loop_pipeline 
+Execute       rtl_gen_preprocess loop_pipeline 
+INFO-FLOW: Model list for synthesis: loop_pipeline
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'loop_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model loop_pipeline 
+Execute       schedule -model loop_pipeline 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.267 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.378 seconds; current allocated memory: 159.684 MB.
+Execute       syn_report -verbosereport -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.303 sec.
+Execute       db_write -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.sched.adb -f 
+INFO-FLOW: Finish scheduling loop_pipeline.
+Execute       set_default_model loop_pipeline 
+Execute       bind -model loop_pipeline 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.192 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.528 seconds; current allocated memory: 162.176 MB.
+Execute       syn_report -verbosereport -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.216 sec.
+Execute       db_write -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.bind.adb -f 
+INFO-FLOW: Finish binding loop_pipeline.
+Execute       get_model_list loop_pipeline -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess loop_pipeline 
+INFO-FLOW: Model list for RTL generation: loop_pipeline
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'loop_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model loop_pipeline -top_prefix  -sub_prefix loop_pipeline_ -mg_file D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'loop_pipeline/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'loop_pipeline/A' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'loop_pipeline' to 's_axilite & ap_ctrl_chain'.
+WARNING: [RTGEN 206-101] Register 'acc_V' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return' and 'A' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_9s_9s_8ns_20s_20_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'loop_pipeline'.
+Command       create_rtl_model done; 0.108 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.404 seconds; current allocated memory: 167.328 MB.
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.rtl_wrap.cfg.tcl 
+Execute       gen_rtl loop_pipeline -istop -style xilinx -f -lang vhdl -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/syn/vhdl/loop_pipeline 
+Execute       gen_rtl loop_pipeline -istop -style xilinx -f -lang vlog -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/syn/verilog/loop_pipeline 
+Execute       syn_report -csynth -model loop_pipeline -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/syn/report/loop_pipeline_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -rtlxml -model loop_pipeline -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/syn/report/loop_pipeline_csynth.xml 
+Execute       syn_report -verbosereport -model loop_pipeline -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Command       syn_report done; 0.245 sec.
+Execute       db_write -model loop_pipeline -f -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.adb 
+Execute       db_write -model loop_pipeline -bindview -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info loop_pipeline -p D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline 
+Execute       export_constraint_db -f -tool general -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.constraint.tcl 
+Execute       syn_report -designview -model loop_pipeline -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.design.xml 
+Execute       syn_report -csynthDesign -model loop_pipeline -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute       syn_report -wcfg -model loop_pipeline -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model loop_pipeline -o D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.protoinst 
+Execute       sc_get_clocks loop_pipeline 
+Execute       sc_get_portdomain loop_pipeline 
+INFO-FLOW: Model list for RTL component generation: loop_pipeline
+INFO-FLOW: Handling components in module [loop_pipeline] ... 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.compgen.tcl 
+INFO-FLOW: Found component loop_pipeline_ama_addmuladd_9s_9s_8ns_20s_20_4_1.
+INFO-FLOW: Append model loop_pipeline_ama_addmuladd_9s_9s_8ns_20s_20_4_1
+INFO-FLOW: Found component loop_pipeline_gmem_m_axi.
+INFO-FLOW: Append model loop_pipeline_gmem_m_axi
+INFO-FLOW: Found component loop_pipeline_control_s_axi.
+INFO-FLOW: Append model loop_pipeline_control_s_axi
+INFO-FLOW: Append model loop_pipeline
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: loop_pipeline_ama_addmuladd_9s_9s_8ns_20s_20_4_1 loop_pipeline_gmem_m_axi loop_pipeline_control_s_axi loop_pipeline
+INFO-FLOW: Generating D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model loop_pipeline_ama_addmuladd_9s_9s_8ns_20s_20_4_1
+INFO-FLOW: To file: write model loop_pipeline_gmem_m_axi
+INFO-FLOW: To file: write model loop_pipeline_control_s_axi
+INFO-FLOW: To file: write model loop_pipeline
+INFO-FLOW: Generating D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.102 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/vhdl' dstVlogDir='D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/vlog' tclDir='D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db' modelList='loop_pipeline_ama_addmuladd_9s_9s_8ns_20s_20_4_1
+loop_pipeline_gmem_m_axi
+loop_pipeline_control_s_axi
+loop_pipeline
+' expOnly='0'
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.compgen.tcl 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         source ./control.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.994 seconds; current allocated memory: 175.906 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='loop_pipeline_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=D:/subham/newcastle/project/learn/loop_pipeline/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='loop_pipeline_ama_addmuladd_9s_9s_8ns_20s_20_4_1
+loop_pipeline_gmem_m_axi
+loop_pipeline_control_s_axi
+loop_pipeline
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.tbgen.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.compgen.dataonly.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.compgen.dataonly.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.rtl_wrap.cfg.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.compgen.dataonly.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.tbgen.tcl 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.constraint.tcl 
+Execute       sc_get_clocks loop_pipeline 
+Execute       source D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE loop_pipeline LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE loop_pipeline LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST loop_pipeline MODULE2INSTS {loop_pipeline loop_pipeline} INST2MODULE {loop_pipeline loop_pipeline} INSTDATA {loop_pipeline {DEPTH 1 CHILDREN {}}} MODULEDATA {loop_pipeline {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_13_fu_346_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_15_fu_357_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_17_fu_368_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_17 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_19_fu_379_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_19 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_21_fu_390_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_21 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_23_fu_401_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_23 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_25_fu_412_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_25 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_27_fu_423_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_27 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_29_fu_434_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_29 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_31_fu_445_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_31 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_33_fu_456_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_33 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_35_fu_467_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_35 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_37_fu_478_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_37 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_39_fu_489_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_39 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_41_fu_500_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_41 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_43_fu_511_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_43 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_45_fu_522_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_45 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_47_fu_533_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_47 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_49_fu_544_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19 VARIABLE empty_49 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp4_fu_573_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp6_fu_603_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp5_fu_613_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp1_fu_623_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp8_fu_643_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp10_fu_676_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp9_fu_686_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp7_fu_696_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp_fu_706_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp13_fu_726_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp15_fu_756_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp14_fu_766_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp12_fu_776_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp17_fu_796_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp17 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp19_fu_828_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp19 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp18_fu_838_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp18 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp16_fu_848_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp16 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp11_fu_858_p2 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_9s_9s_8ns_20s_20_4_1_U1 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp2 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME ama_addmuladd_9s_9s_8ns_20s_20_4_1_U1 SOURCE ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:24 VARIABLE tmp3 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_9s_9s_8ns_20s_20_4_1_U1 SOURCE {D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 1 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.524 seconds; current allocated memory: 182.148 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for loop_pipeline.
+INFO: [VLOG 209-307] Generating Verilog RTL for loop_pipeline.
+Execute       syn_report -model loop_pipeline -printsummary 
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+Command     autosyn done; 2.784 sec.
+Command   csynth_design done; 13.088 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 13.088 seconds; current allocated memory: 76.668 MB.
+Command ap_source done; 24.289 sec.
+Execute cleanup_all 

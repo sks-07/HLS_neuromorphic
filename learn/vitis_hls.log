@@ -1,0 +1,95 @@
+INFO: [HLS 200-10] Running 'D:/xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Subham' on host 'laptop-nhi76ao9' (Windows NT_amd64 version 6.2) on Mon Apr 10 16:14:29 +0100 2023
+INFO: [HLS 200-10] In directory 'D:/subham/newcastle/project/learn'
+Sourcing Tcl script 'D:/subham/newcastle/project/learn/loop_pipeline/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source D:/subham/newcastle/project/learn/loop_pipeline/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project loop_pipeline 
+INFO: [HLS 200-10] Opening project 'D:/subham/newcastle/project/learn/loop_pipeline'.
+INFO: [HLS 200-1510] Running: set_top loop_pipeline 
+INFO: [HLS 200-1510] Running: add_files ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp 
+INFO: [HLS 200-10] Adding design file '../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline_test.cpp 
+INFO: [HLS 200-10] Adding test bench file '../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/result.golden.dat 
+INFO: [HLS 200-10] Adding test bench file '../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/result.golden.dat' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vitis 
+INFO: [HLS 200-10] Opening solution 'D:/subham/newcastle/project/learn/loop_pipeline/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: source ./loop_pipeline/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name loop_pipeline loop_pipeline 
+INFO: [HLS 200-1510] Running: set_directive_pipeline loop_pipeline/LOOP_I 
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 54845
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.07 seconds; current allocated memory: 105.617 MB.
+INFO: [HLS 200-10] Analyzing design file '../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.886 seconds; current allocated memory: 106.211 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi37ELb1EEC2EDq37_i' into 'ap_int_base<37, true>::ap_int_base<5, true>(ap_int_base<5, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi37ELb1EEC2EDq37_i' into 'ap_int_base<37, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi37ELb1EEC2EDq37_i' into 'ap_int_base<37, true>::ap_int_base(int)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<37, true>::ap_int_base<5, true>(ap_int_base<5, true> const&)' into 'ap_int_base<5, true>::RType<32, true>::mult operator*<5, true, 32, true>(ap_int_base<5, true> const&, ap_int_base<32, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:339)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<37, true>::ap_int_base(int)' into 'ap_int_base<5, true>::RType<32, true>::mult operator*<5, true, 32, true>(ap_int_base<5, true> const&, ap_int_base<32, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<37, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<5, true>::RType<32, true>::mult operator*<5, true, 32, true>(ap_int_base<5, true> const&, ap_int_base<32, true> const&)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<5, true>::RType<($_0)32, true>::mult operator*<5, true>(ap_int_base<5, true> const&, int)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1633:483)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, true>::RType<32, true>::mult operator*<5, true, 32, true>(ap_int_base<5, true> const&, ap_int_base<32, true> const&)' into 'ap_int_base<5, true>::RType<($_0)32, true>::mult operator*<5, true>(ap_int_base<5, true> const&, int)' (D:/xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1633:481)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<5, true>::RType<($_0)32, true>::mult operator*<5, true>(ap_int_base<5, true> const&, int)' into 'loop_pipeline(ap_int<5>*)' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:26:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<20, true>& ap_int_base<20, true>::operator+=<37, true>(ap_int_base<37, true> const&)' into 'loop_pipeline(ap_int<5>*)' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:26:8)
+INFO: [HLS 214-291] Loop 'LOOP_J' is marked as complete unroll implied by the pipeline pragma (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:25:11)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_J' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:25:11) in function 'loop_pipeline' completely with a factor of 20 (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19:0)
+WARNING: [HLS 214-368] interface mode 'ap_none' with wrong type 'i5*' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.009 seconds; current allocated memory: 107.051 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 107.051 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 118.273 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 127.562 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'loop_pipeline' (../Vitis-HLS-Introductory-Examples/Pipelining/Loops/pipelined_loop/loop_pipeline.cpp:19:9)...19 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.102 seconds; current allocated memory: 155.719 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 159.684 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'loop_pipeline' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'loop_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=tmp2) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.378 seconds; current allocated memory: 159.684 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.528 seconds; current allocated memory: 162.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'loop_pipeline' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'loop_pipeline/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'loop_pipeline/A' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'loop_pipeline' to 's_axilite & ap_ctrl_chain'.
+WARNING: [RTGEN 206-101] Register 'acc_V' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return' and 'A' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_9s_9s_8ns_20s_20_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'loop_pipeline'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.404 seconds; current allocated memory: 167.328 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.994 seconds; current allocated memory: 175.906 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.524 seconds; current allocated memory: 182.148 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for loop_pipeline.
+INFO: [VLOG 209-307] Generating Verilog RTL for loop_pipeline.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 13.088 seconds; current allocated memory: 76.668 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 24.752 seconds; peak allocated memory: 182.355 MB.

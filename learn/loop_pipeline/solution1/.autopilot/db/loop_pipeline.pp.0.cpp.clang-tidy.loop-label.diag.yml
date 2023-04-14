@@ -1,0 +1,49 @@
+---
+MainSourceFile:  'D:/subham/newcastle/project/learn/loop_pipeline/solution1/.autopilot/db/loop_pipeline.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        'D:\xilinx\Vitis_HLS\2022.2\common\technology\autopilot\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp'
+        Offset:          856176
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'D:\xilinx\Vitis_HLS\2022.2\common\technology\autopilot\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp'
+        Offset:          1063192
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'D:\xilinx\Vitis_HLS\2022.2\common\technology\autopilot\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp'
+        Offset:          1063631
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'D:\xilinx\Vitis_HLS\2022.2\common\technology\autopilot\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp'
+        Offset:          1064071
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        'D:\xilinx\Vitis_HLS\2022.2\common\technology\autopilot\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'D:\subham\newcastle\project\learn\loop_pipeline\solution1\.autopilot\db\loop_pipeline.pp.0.cpp'
+        Offset:          1325796
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+...
